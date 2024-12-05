@@ -1,0 +1,96 @@
+/* .pokie-wrapper{
+    display: flex ;
+    flex-direction: column;
+}
+
+.pokiedex-heading{
+    margin: 0 auto;
+    letter-spacing: 5px;
+
+} */
+
+
+/* Wrapper for the Pokemon List */
+.pokie-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures content is centered */
+    padding: 20px;
+}
+
+/* Heading Style for the Pokedex */
+.pokiedex-heading {
+    margin: 0 auto;
+    letter-spacing: 5px;
+    font-size: 30px; /* Adjust font size to make it more readable */
+    font-weight: bold; /* Make the heading bold */
+    text-transform: uppercase; /* Makes the heading text uppercase */
+}
+
+/* Styling for Cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for cards */
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 18px;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
